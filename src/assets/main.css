@@ -97,8 +97,8 @@ body.dark-mode {
 
 .DarkModeBtn {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 40px;
+  bottom: 40px;
   transition: .3s;
   color: rgb(184, 66, 155);
   border: none;
