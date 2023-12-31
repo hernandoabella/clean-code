@@ -1,10 +1,10 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import CleanCode from "./components/CleanCode.vue";
 </script>
 
 <template>
   <main>
-    <HelloWorld />
+    <CleanCode />
   </main>
 </template>
 <style scoped></style>
