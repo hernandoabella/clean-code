@@ -1,9 +1,98 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
+import { onMounted, ref } from 'vue';
+
+// Define a reactive variable for dark mode
+const isDarkMode = ref(false);
+
+// Run the JavaScript logic after the component is mounted
+onMounted(() => {
+  window.onscroll = function () {
+    scrollIndicator();
+  };
+
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  darkModeToggle.addEventListener('click', toggleDarkMode);
+
+  const darkModeIcon = document.getElementById('darkModeIcon');
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    isDarkMode.value = !isDarkMode.value;
+
+    // Change the icon class when toggling dark mode
+    if (isDarkMode.value) {
+      darkModeIcon.classList.remove('fa-moon');
+      darkModeIcon.classList.add('fa-sun');
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      darkModeIcon.classList.remove('fa-sun');
+      darkModeIcon.classList.add('fa-moon');
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  }
+
+  // Get all navigation links
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Assign click events to links to highlight the active section
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute('data-target');
+      const targetSection = document.getElementById(targetId);
+      scrollToSection(targetSection);
+    });
+  });
+
+  // Function to highlight the active section while scrolling
+  function scrollIndicator() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    navLinks.forEach(link => {
+      const targetId = link.getAttribute('data-target');
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection.offsetTop <= winScroll && targetSection.offsetTop + targetSection.offsetHeight > winScroll) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    let scrolled = (winScroll / height) * 100;
+    document.querySelector('.scroll-indicator').style.width = scrolled + '%';
+  }
+
+  // Function to scroll to a section when clicking a link
+  function scrollToSection(targetSection) {
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: 'smooth',
+    });
+  }
+
+  // Function to toggle dark mode
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+
+    // Save user preference in local storage
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  }
+
+  const toggleSidebarButton = document.getElementById('toggleSidebar');
+  toggleSidebarButton.addEventListener('click', toggleSidebar);
+
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const content = document.querySelector('.content');
+    sidebar.classList.toggle('closed');
+    content.classList.toggle('closed');
+  }
 });
 </script>
 
