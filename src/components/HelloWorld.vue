@@ -6,6 +6,13 @@ const isDarkMode = ref(false);
 
 // Run the JavaScript logic after the component is mounted
 onMounted(() => {
+  // Check the local storage for dark mode preference
+  const storedDarkMode = localStorage.getItem('darkMode');
+  if (storedDarkMode === 'enabled') {
+    document.body.classList.add('dark-mode');
+    isDarkMode.value = true;
+  }
+
   window.onscroll = function () {
     scrollIndicator();
   };
@@ -75,9 +82,10 @@ onMounted(() => {
   // Function to toggle dark mode
   function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
+    isDarkMode.value = !isDarkMode.value;
 
     // Save user preference in local storage
-    if (document.body.classList.contains('dark-mode')) {
+    if (isDarkMode.value) {
       localStorage.setItem('darkMode', 'enabled');
     } else {
       localStorage.setItem('darkMode', 'disabled');
@@ -94,7 +102,9 @@ onMounted(() => {
     content.classList.toggle('closed');
   }
 });
+
 </script>
+
 
 <template>
   <button id="toggleSidebar"><i class="fa-solid fa-bars"></i></button>
