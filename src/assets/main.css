@@ -84,7 +84,7 @@ body.dark-mode {
 }
 
 .section.active {
-  background-color: #e0e0e0; 
+  background-color: #b13636;
 }
 
 .scroll-indicator {
@@ -105,6 +105,10 @@ body.dark-mode {
   position: fixed;
   margin: 20px;
   z-index: 100;
-  padding: 5px;
   cursor: pointer;
+  border-radius: 25px;
+}
+
+#toggleSidebar i {
+  padding: 10px;
 }
