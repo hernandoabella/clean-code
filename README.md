@@ -3,11 +3,11 @@
 # Table of Contents
 
 1. [Introduction](#Introduction)
-2. [My second title](#my-second-title)
+2. [Naming Conventions](#Naming-Conventions)
 
 # Table of contents
 # 
-# Naming Conventions
+# 
 # Code Formatting
 # Comments and Documentation
 # Functions and Methods
