@@ -2,7 +2,7 @@
 
 # Table of Contents
 
-1. [My first title](#introduction)
+1. [Introduction](#Introduction)
 2. [My second title](#my-second-title)
 
 # Table of contents
@@ -23,7 +23,7 @@
 # Tools and Linters
 # Conclusion
 
-## introduction
+## Introduction
 Clean code is a fundamental aspect of software development, embodying principles that extend beyond mere aesthetics. Understanding the purpose and benefits of writing clean code is crucial for developers committed to producing high-quality software.
 
 **Purpose of Clean Code**
