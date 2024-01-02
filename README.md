@@ -1,22 +1,23 @@
 # Clean Code
 
-Table of contents
-Introduction
-Naming Conventions
-Code Formatting
-Comments and Documentation
-Functions and Methods
-Variables and Constants
-Code Duplication
-Error Handling
-Testing
-Version Control and Branching
-Code Reviews
-Continuous Integration
-Performance Considerations
-Security
-Tools and Linters
-Conclusion
+# Table of Contents
+
+1. [Introduction](#Introduction)
+2. [Naming Conventions](#Naming-Conventions)
+3. [Code Formatting](#Code-Formatting)
+4. [Comments and Documentation](#Comments-and-Documentation)
+5. [Functions and Methods](#Functions-and-Methods)
+6. [Variables and Constants](#Variables-and-Constants)
+7. [Code Duplication](#Code-Duplication)
+8. [Error Handling](#Error-Handling)
+9. [Testing](#Testing)
+10. [Version Control and Branching](#Version-Control-and-Branching)
+11. [Code Reviews](#Code-Reviews)
+12. [Continuous Integration](#Continuous-Integration)
+13. [Performance Considerations](#Performance-Considerations)
+14. [Security](#Security)
+15. [Tools and Linters](#Tools-and-Linters)
+16. [Conclusion](#Conclusion)
 
 ## Introduction
 Clean code is a fundamental aspect of software development, embodying principles that extend beyond mere aesthetics. Understanding the purpose and benefits of writing clean code is crucial for developers committed to producing high-quality software.
