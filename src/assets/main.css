@@ -19,18 +19,22 @@ body.dark-mode {
   color: #fff;
 }
 
+.sidebar .dark-mode {
+  background-color: #999;
+  color: #fff;
+}
+
 .sidebar {
   height: 100%;
   width: 350px;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #111;
   padding-top: 20px;
-  color: white;
   display: flex;
   align-items: center;
   transition: 0.3s;
+  border-right: 1px solid #ECEBEB;
 }
 
 .sidebar ul {
@@ -42,16 +46,20 @@ body.dark-mode {
   list-style: none;
 }
 
+.dark-mode .sidebar a {
+  color: #fff;
+}
+
 .sidebar a {
   padding: 10px;
   text-decoration: none;
   font-size: 16px;
-  color: white;
   display: block;
+  color: #333;
 }
 
 .sidebar a.active {
-  color: #00ff00;
+  color: #9776DF;
 }
 
 .sidebar.closed {
@@ -79,13 +87,13 @@ body.dark-mode {
 }
 
 .section.active {
-  background-color: #b13636;
+  background-color: #5100FF;
 }
 
 .scroll-indicator {
   height: 5px;
   width: 0;
-  background-color: #00ff00;
+  background-color: #5100FF;
   position: fixed;
   top: 0;
   left: 0;
@@ -97,14 +105,10 @@ body.dark-mode {
   right: 40px;
   bottom: 40px;
   transition: .3s;
-  color: rgb(184, 66, 155);
+  color: #9776DF;
   border: none;
   background: none;
   cursor: pointer;
-}
-
-.DarkModeBtn:hover {
-  font-size: 1.8em;
 }
 
 .DarkModeBtn i {
@@ -133,4 +137,20 @@ body.dark-mode {
 
 ul {
   margin: 10px 30px;
+}
+
+.github {
+  font-size: 2em;
+  position: fixed;
+  right: 20px;
+  top: 10px;
+  color: #000;
+}
+
+.dark-mode .github {
+  color: #fff;
+}
+
+.github:hover {
+  color: #5100FF;
 }
