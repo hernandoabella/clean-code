@@ -119,6 +119,11 @@ body.dark-mode {
   background: rgb(68, 66, 184);
   color: #fff;
   border: none;
+  transition: .3s;
+}
+
+#toggleSidebar:hover {
+  transform: scale(1.3);
 }
 
 #toggleSidebar i {
