@@ -20,7 +20,7 @@ body.dark-mode {
 
 .sidebar {
   height: 100%;
-  width: 250px;
+  width: 350px;
   position: fixed;
   top: 0;
   left: 0;
@@ -68,17 +68,14 @@ body.dark-mode {
 }
 
 .content {
-  margin-left: 260px;
+  margin-left: 350px;
   padding: 16px;
   transition: 0.3s;
 }
 
 .section {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 50px;
 }
 
 .section.active {
