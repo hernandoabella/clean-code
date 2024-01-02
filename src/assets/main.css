@@ -28,7 +28,6 @@ body.dark-mode {
   padding-top: 20px;
   color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
   transition: 0.3s;
 }
