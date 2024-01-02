@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -128,4 +129,8 @@ body.dark-mode {
 
 #toggleSidebar i {
   padding: 10px;
+}
+
+ul {
+  margin: 10px 30px;
 }
