@@ -86,6 +86,7 @@ function toggleSidebar() {
 
 <template>
   <button id="toggleSidebar"><i class="fa-solid fa-bars"></i></button>
+  <a class="github"><i class="fa-solid fa-bars"></i></a>
   <div class="sidebar">
     <ul>
       <li>
@@ -162,13 +163,12 @@ function toggleSidebar() {
         </a>
       </li>
     </ul>
-   
   </div>
 
   <div class="content">
     <div id="section1" class="section">
-      <h1>Introduction</h1>
-      <p>Contenido de la sección 1...</p>
+      <h1>Sección 1</h1>
+      <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section2" class="section">
@@ -241,12 +241,10 @@ function toggleSidebar() {
       <p>Contenido de la sección 2...</p>
     </div>
 
-     <button class="DarkModeBtn" id="darkModeToggle">
+    <button class="DarkModeBtn" id="darkModeToggle">
       <i id="darkModeIcon" class="fas fa-moon"></i>
     </button>
-
   </div>
 
   <div class="scroll-indicator"></div>
-  
 </template>
