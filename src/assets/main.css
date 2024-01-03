@@ -1,7 +1,4 @@
-@import './base.css';
-
-
-@media (min-width: 1024px) {}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 * {
   padding: 0;
@@ -12,6 +9,7 @@
 
 body {
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 body.dark-mode {
@@ -40,7 +38,7 @@ header {
 }
 
 .logo {
-  background: -webkit-linear-gradient(#eee, #333);
+  background: -webkit-linear-gradient(#B62AB4, #810D6D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -114,12 +112,17 @@ header {
 }
 
 .section:nth-child(1) {
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 .section {
   padding: 50px;
   transition: background-color 0.5s ease-in-out;
+  height: 80vh;
+  border: 1px solid #ECEBEB;
+  margin: 50px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .section.active {
@@ -163,6 +166,8 @@ header {
   color: #fff;
   border: none;
   transition: .3s;
+  display: block;
+  /* Asegura que esté visible en dispositivos móviles */
 }
 
 #toggleSidebar:hover {
@@ -191,4 +196,39 @@ ul {
 
 .github:hover {
   color: #9776DF;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    width: 0;
+    transition: 0.3s;
+  }
+
+  .sidebar ul {
+    display: none;
+  }
+
+  .sidebar.closed {
+    transform: translateX(0);
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  #toggleSidebar {
+    display: block;
+  }
+
+  .github {
+    display: none;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  .fa-times {
+    display: none;
+  }
 }
