@@ -86,19 +86,22 @@ function toggleSidebar() {
 
 <template>
   <header>
-    <div class="header-container logo">
-      Clean Code
+    <div class="header-container">
+      <div>
+        <button id="toggleSidebar"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="logo">Clean Code</div>
+      <div>
+        <a
+          href="https://github.com/hernandoabella/clean-code"
+          target="_blank"
+          class="github"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
     </div>
-
-    <a
-    href="https://github.com/hernandoabella/clean-code"
-    target="_blank"
-    class="github"
-    ><i class="fa-brands fa-github"></i
-  ></a>
   </header>
-  <button id="toggleSidebar"><i class="fa-solid fa-bars"></i></button>
-  
+
   <div class="sidebar">
     <ul>
       <li>
