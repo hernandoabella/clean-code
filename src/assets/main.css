@@ -120,7 +120,8 @@ header {
 }
 
 .section:nth-child(1) {
-  margin-top: 80px; /* Ajusta según sea necesario */
+  margin-top: 90px;
+  /* Ajusta según sea necesario */
 
 }
 
@@ -129,10 +130,10 @@ header {
 }
 
 .section {
-  margin-top: 130px;
+  margin: 50px;
   padding: 50px;
   transition: background-color 0.5s ease-in-out;
-  height: 80vh;
+  height: 85vh;
   border: 1px solid #ECEBEB;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
