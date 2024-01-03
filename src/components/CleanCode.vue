@@ -97,7 +97,7 @@ function getHeaderHeight() {
 }
 
 function getMargin() {
-  return 30; // Puedes ajustar este valor según sea necesario
+  return 40;
 }
 
 function updateNavLinksActiveState(activeSection) {
@@ -219,7 +219,7 @@ function updateNavLinksActiveState(activeSection) {
         </a>
       </li>
       <li>
-        <a href="#section15" class="nav-link" data-target="section15"
+        <a href="#section16" class="nav-link" data-target="section16"
           >Conclusion
         </a>
       </li>
