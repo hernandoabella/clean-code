@@ -4,18 +4,27 @@ import { onMounted, ref } from "vue";
 const isDarkMode = ref(false);
 
 onMounted(() => {
+  initializeDarkMode();
+  initializeScroll();
+  initializeNavLinks();
+  initializeSidebar();
+});
+
+function initializeDarkMode() {
   const storedDarkMode = localStorage.getItem("darkMode");
   if (storedDarkMode === "enabled") {
     toggleDarkMode(true);
   }
 
-  window.addEventListener("scroll", scrollIndicator);
-
   const darkModeToggle = document.getElementById("darkModeToggle");
   darkModeToggle.addEventListener("click", () => toggleDarkMode());
+}
 
-  const darkModeIcon = document.getElementById("darkModeIcon");
+function initializeScroll() {
+  window.addEventListener("scroll", scrollIndicator);
+}
 
+function initializeNavLinks() {
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -25,10 +34,12 @@ onMounted(() => {
       scrollToSection(targetSection);
     });
   });
+}
 
+function initializeSidebar() {
   const toggleSidebarButton = document.getElementById("toggleSidebar");
   toggleSidebarButton.addEventListener("click", toggleSidebar);
-});
+}
 
 function toggleDarkMode(forceToggle) {
   document.body.classList.toggle("dark-mode", forceToggle ?? !isDarkMode.value);
@@ -46,9 +57,7 @@ function toggleDarkMode(forceToggle) {
 
 function scrollIndicator() {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
@@ -88,7 +97,9 @@ function toggleSidebar() {
   <header>
     <div class="header-container">
       <div>
-        <button id="toggleSidebar"><i class="fa-solid fa-bars"></i></button>
+        <button id="toggleSidebar" @click="toggleSidebarMobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
       <div class="logo">Clean Code</div>
       <div>
@@ -253,6 +264,11 @@ function toggleSidebar() {
 
     <div id="section15" class="section">
       <h1>Sección 15</h1>
+      <p>Contenido de la sección 2...</p>
+    </div>
+
+    <div id="section16" class="section">
+      <h1>Sección 16</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
