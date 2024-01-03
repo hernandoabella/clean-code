@@ -10,10 +10,7 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background: url('/background.webp');
-  background-size: cover;
-  background-repeat: repeat;
-  height: 100vh;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
 body.dark-mode {
@@ -23,12 +20,12 @@ body.dark-mode {
 
 header {
   position: fixed;
-  padding: 25px;
   border-bottom: 1px solid #E6E5E5;
   width: 100%;
   z-index: 1;
   background: #fff;
   font-size: 2em;
+  margin-bottom: 120px;
 }
 
 .header-right-elements {
@@ -123,7 +120,8 @@ header {
 }
 
 .section:nth-child(1) {
-  margin-top: 120px;
+  margin-top: 80px; /* Ajusta según sea necesario */
+
 }
 
 .dark-mode .section {
@@ -131,14 +129,19 @@ header {
 }
 
 .section {
+  margin-top: 130px;
   padding: 50px;
   transition: background-color 0.5s ease-in-out;
   height: 80vh;
   border: 1px solid #ECEBEB;
-  margin: 50px;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: #fff;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 .scroll-indicator {
@@ -163,10 +166,10 @@ header {
   background: none;
   cursor: pointer;
   font-size: 1em;
+  margin-right: 20px;
 }
 
 #toggleSidebar {
-  position: fixed;
   top: 10px;
   margin: 20px;
   z-index: 100;
@@ -206,36 +209,23 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
-  .sidebar {
-    width: 0;
-    transition: 0.3s;
+  header {
+    position: relative;
   }
 
-  .sidebar ul {
-    display: none;
-  }
-
-  .sidebar.closed {
-    transform: translateX(0);
-  }
-
-  .content {
-    margin-left: 0;
-  }
-
-  #toggleSidebar {
-    display: block;
+  .header-container {
+    gap: 10px;
   }
 
   .github {
     display: none;
   }
 
-  .fa-bars {
-    display: block;
+  .DarkModeBtn {
+    display: none;
   }
 
-  .fa-times {
+  .logo {
     display: none;
   }
 }
