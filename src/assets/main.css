@@ -10,7 +10,6 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
 body.dark-mode {
@@ -22,7 +21,7 @@ header {
   position: fixed;
   border-bottom: 1px solid #E6E5E5;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   background: #fff;
   font-size: 2em;
   margin-bottom: 120px;
@@ -38,13 +37,13 @@ header {
 }
 
 .dark-mode .logo {
-  background: -webkit-linear-gradient(#B62AB4, #810D6D);
+  background: -webkit-linear-gradient(#5100FF, #8958F3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .logo {
-  background: -webkit-linear-gradient(#B62AB4, #810D6D);
+  background: -webkit-linear-gradient(#5100FF, #8958F3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Archivo Black', sans-serif;
@@ -73,6 +72,7 @@ header {
   transition: 0.3s;
   border-right: 1px solid #ECEBEB;
   background: #fff;
+
 }
 
 .sidebar ul {
@@ -101,7 +101,7 @@ header {
 }
 
 .sidebar.closed {
-  transform: translateX(-400px);
+  transform: translateX(-100%);
 }
 
 .sidebar button {
@@ -121,8 +121,6 @@ header {
 
 .section:nth-child(1) {
   margin-top: 90px;
-  /* Ajusta según sea necesario */
-
 }
 
 .dark-mode .section {
@@ -209,9 +207,11 @@ ul {
   color: #9776DF;
 }
 
-@media only screen and (max-width: 600px) {
-  header {
-    position: relative;
+@media only screen and (max-width: 768px) {
+
+  .section {
+    margin: 20px 0px;
+    padding: 20px;
   }
 
   .header-container {
@@ -229,4 +229,13 @@ ul {
   .logo {
     display: none;
   }
+
+  .sidebar {
+    transform: translate(-100%);
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
 }
