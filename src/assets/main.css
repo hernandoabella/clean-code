@@ -122,12 +122,7 @@ header {
   border: 1px solid #ECEBEB;
   margin: 50px;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-.section.active {
-  background-color: #b13636;
-  /* Color de fondo para resaltar la sección activa */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .scroll-indicator {
