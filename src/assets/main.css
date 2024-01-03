@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 * {
   padding: 0;
@@ -12,7 +12,7 @@ body {
   font-family: 'Lato', sans-serif;
   background: url('/background.webp');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   height: 100vh;
 }
 
@@ -31,6 +31,11 @@ header {
   font-size: 2em;
 }
 
+.header-right-elements {
+  display: flex;
+  gap: 20px;
+}
+
 .dark-mode header {
   background: #333;
 }
@@ -45,8 +50,7 @@ header {
   background: -webkit-linear-gradient(#B62AB4, #810D6D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Rock Salt', cursive;
-  font-size: .5em;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 .header-container {
@@ -119,7 +123,11 @@ header {
 }
 
 .section:nth-child(1) {
-  margin-top: 100px;
+  margin-top: 120px;
+}
+
+.dark-mode .section {
+  background: #333;
 }
 
 .section {
@@ -143,19 +151,18 @@ header {
   z-index: 1;
 }
 
+.dark-mode .DarkModeBtn i {
+  color: #fff;
+}
+
+
 .DarkModeBtn {
   transition: .3s;
-  color: #9776DF;
+  color: #333;
   border: none;
   background: none;
   cursor: pointer;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-}
-
-.DarkModeBtn i {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 #toggleSidebar {
@@ -186,10 +193,7 @@ ul {
 }
 
 .github {
-  font-size: 1em;
-  right: 25px;
-  top: 25px;
-  color: #000;
+  color: #333;
   transition: .3s;
 }
 
