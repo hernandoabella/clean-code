@@ -49,7 +49,7 @@ header {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .dark-mode .sidebar {
@@ -139,14 +139,14 @@ header {
 }
 
 .DarkModeBtn {
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
   transition: .3s;
   color: #9776DF;
   border: none;
   background: none;
   cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 }
 
 .DarkModeBtn i {
@@ -180,7 +180,6 @@ ul {
 
 .github {
   font-size: 1em;
-  position: fixed;
   right: 25px;
   top: 25px;
   color: #000;
