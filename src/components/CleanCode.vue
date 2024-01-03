@@ -57,7 +57,9 @@ function toggleDarkMode(forceToggle) {
 
 function scrollIndicator() {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
 
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
@@ -102,13 +104,20 @@ function toggleSidebar() {
         </button>
       </div>
       <div class="logo">Clean Code</div>
-      <div>
-        <a
-          href="https://github.com/hernandoabella/clean-code"
-          target="_blank"
-          class="github"
-          ><i class="fa-brands fa-github"></i
-        ></a>
+      <div class="header-right-elements">
+        <div>
+          <a
+            href="https://github.com/hernandoabella/clean-code"
+            target="_blank"
+            class="github"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <div>
+          <button class="DarkModeBtn" id="darkModeToggle">
+            <i id="darkModeIcon" class="fas fa-moon"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -271,10 +280,6 @@ function toggleSidebar() {
       <h1>Sección 16</h1>
       <p>Contenido de la sección 2...</p>
     </div>
-
-    <button class="DarkModeBtn" id="darkModeToggle">
-      <i id="darkModeIcon" class="fas fa-moon"></i>
-    </button>
   </div>
 
   <div class="scroll-indicator"></div>
