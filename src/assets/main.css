@@ -19,8 +19,24 @@ body.dark-mode {
   color: #fff;
 }
 
-.sidebar .dark-mode {
-  background-color: #999;
+header {
+  position: fixed;
+  margin-bottom: 50px;
+  padding: 25px;
+  border-bottom: 1px solid #333;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode .sidebar {
+  background-color: #000;
   color: #fff;
 }
 
@@ -81,13 +97,18 @@ body.dark-mode {
   transition: 0.3s;
 }
 
+.section:nth-child(1) {
+  margin-top: 60px;
+}
+
 .section {
-  height: 100vh;
   padding: 50px;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .section.active {
-  background-color: #5100FF;
+  background-color: #b13636;
+  /* Color de fondo para resaltar la sección activa */
 }
 
 .scroll-indicator {
