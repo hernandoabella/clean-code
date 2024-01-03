@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 * {
   padding: 0;
@@ -10,6 +10,10 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
+  background: url('/background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 body.dark-mode {
@@ -41,6 +45,8 @@ header {
   background: -webkit-linear-gradient(#B62AB4, #810D6D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: 'Rock Salt', cursive;
+  font-size: .5em;
 }
 
 .header-container {
@@ -65,6 +71,7 @@ header {
   align-items: center;
   transition: 0.3s;
   border-right: 1px solid #ECEBEB;
+  background: #fff;
 }
 
 .sidebar ul {
@@ -123,6 +130,7 @@ header {
   margin: 50px;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
 }
 
 .scroll-indicator {
