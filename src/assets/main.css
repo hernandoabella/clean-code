@@ -23,10 +23,27 @@ header {
   position: fixed;
   margin-bottom: 50px;
   padding: 25px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #E6E5E5;
   width: 100%;
   z-index: 1;
   background: #fff;
+  font-size: 2em;
+}
+
+.dark-mode header {
+  background: #333;
+}
+
+.dark-mode .logo {
+  background: -webkit-linear-gradient(#B62AB4, #810D6D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header-container {
