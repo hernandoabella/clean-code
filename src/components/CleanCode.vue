@@ -56,34 +56,32 @@ function toggleDarkMode(forceToggle) {
 }
 
 function scrollIndicator() {
-  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+  const sections = document.querySelectorAll(".section");
+  const winScroll = window.scrollY || window.pageYOffset;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
 
-  const navLinks = document.querySelectorAll(".nav-link");
-  navLinks.forEach((link) => {
-    const targetId = link.getAttribute("data-target");
-    const targetSection = document.getElementById(targetId);
+  let activeSection = null;
 
-    if (
-      targetSection.offsetTop <= winScroll &&
-      targetSection.offsetTop + targetSection.offsetHeight > winScroll
-    ) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - getHeaderHeight() - getMargin();
+    const sectionBottom = sectionTop + section.offsetHeight;
+
+    if (winScroll >= sectionTop && winScroll < sectionBottom) {
+      activeSection = section;
     }
   });
 
+  updateNavLinksActiveState(activeSection);
+
+  // Resto de la función scrollIndicator
   let scrolled = (winScroll / height) * 100;
   document.querySelector(".scroll-indicator").style.width = scrolled + "%";
 }
 
 function scrollToSection(targetSection) {
   window.scrollTo({
-    top: targetSection.offsetTop,
-    behavior: "smooth",
+    top: targetSection.offsetTop - getHeaderHeight() - getMargin(),
+    behavior: 'smooth',
   });
 }
 
@@ -93,7 +91,30 @@ function toggleSidebar() {
   sidebar.classList.toggle("closed");
   content.classList.toggle("closed");
 }
+
+function getHeaderHeight() {
+  return document.querySelector('header').offsetHeight;
+}
+
+function getMargin() {
+  return 20; // Puedes ajustar este valor según sea necesario
+}
+
+function updateNavLinksActiveState(activeSection) {
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    const targetId = link.getAttribute("data-target");
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection === activeSection) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+}
 </script>
+
 
 <template>
   <header>
@@ -195,6 +216,11 @@ function toggleSidebar() {
       <li>
         <a href="#section15" class="nav-link" data-target="section15"
           >Tools and Linters
+        </a>
+      </li>
+      <li>
+        <a href="#section15" class="nav-link" data-target="section15"
+          >Conclusion
         </a>
       </li>
     </ul>
