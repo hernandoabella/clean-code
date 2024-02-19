@@ -13,7 +13,7 @@ body {
 }
 
 body.dark-mode {
-  background-color: #222;
+  background-color: #150931;
   color: #fff;
 }
 
@@ -33,7 +33,7 @@ header {
 }
 
 .dark-mode header {
-  background: #333;
+  background: #280f5e;
 }
 
 .dark-mode .logo {
@@ -124,7 +124,7 @@ header {
 }
 
 .dark-mode .section {
-  background: #333;
+  background: #100723;
 }
 
 .section {
@@ -231,11 +231,25 @@ ul {
   }
 
   .sidebar {
-    transform: translate(-100%);
+    width: 80px;
   }
 
-  .content {
-    margin-left: 0;
+  .sidebar.collapsed {
+    transform: translateX(-120%);
+  }
+
+  .main-content {
+    margin-left: 80px;
+  }
+
+  /* Show sidebar toggle button */
+  .sidebar-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    /* Ensure it's above the sidebar */
   }
 
 }
