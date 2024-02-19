@@ -56,7 +56,7 @@ header {
 }
 
 .dark-mode .sidebar {
-  background-color: #000;
+  background-color: #0f0623;
   color: #fff;
 }
 
@@ -85,7 +85,7 @@ header {
 }
 
 .dark-mode .sidebar a {
-  color: #fff;
+  color: #dfdfdf;
 }
 
 .sidebar a {
@@ -97,7 +97,7 @@ header {
 }
 
 .sidebar a.active {
-  color: #9776DF;
+  color: #ff86ff;
 }
 
 .sidebar.closed {
