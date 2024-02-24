@@ -37,7 +37,7 @@ header {
 }
 
 .dark-mode .logo {
-  background: -webkit-linear-gradient(#3D2277, #8958F3);
+  background: -webkit-linear-gradient(#EB9B3F, #CA9231);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
