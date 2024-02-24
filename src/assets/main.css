@@ -137,6 +137,14 @@ header {
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
+.section h1 {
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-family: "Inter", sans-serif;
+}
+
 .scroll-indicator {
   height: 5px;
   width: 0;
@@ -169,7 +177,7 @@ header {
   background: rgb(228 226 226);
   color: #000;
   border: none;
-  display: block;
+  display: none;
 }
 
 #toggleSidebar i {
@@ -193,11 +201,6 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
-
-  .section {
-    margin: 20px 0px;
-    padding: 20px;
-  }
 
   .header-container {
     gap: 10px;
@@ -223,14 +226,8 @@ ul {
     margin-left: 80px;
   }
 
-  /* Show sidebar toggle button */
-  .sidebar-toggle {
+  #toggleSidebar {
     display: block;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1001;
-    /* Ensure it's above the sidebar */
   }
 
 }
