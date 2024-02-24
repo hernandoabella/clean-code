@@ -126,9 +126,8 @@ header {
 }
 
 .section {
-  margin: 50px;
-  padding: 50px;
-  height: 85vh;
+  margin: 20px;
+  padding: 20px;
   border: 1px solid #ECEBEB;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
