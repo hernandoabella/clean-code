@@ -37,15 +37,12 @@ header {
 }
 
 .dark-mode .logo {
-  background: -webkit-linear-gradient(#5100FF, #8958F3);
+  background: -webkit-linear-gradient(#3D2277, #8958F3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .logo {
-  background: -webkit-linear-gradient(#5100FF, #8958F3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-family: 'Archivo Black', sans-serif;
 }
 
@@ -75,12 +72,13 @@ header {
 }
 
 .sidebar ul {
-  margin: 40px;
+  margin: 10px;
   padding: 0;
 }
 
 .sidebar ul li {
   list-style: none;
+  padding: 10px;
 }
 
 .dark-mode .sidebar a {
@@ -88,7 +86,6 @@ header {
 }
 
 .sidebar a {
-  padding: 10px;
   text-decoration: none;
   font-size: 16px;
   display: block;
@@ -161,10 +158,6 @@ header {
   cursor: pointer;
   font-size: 1em;
   margin-right: 20px;
-}
-
-.dark-mode #toggleSidebar {
-
 }
 
 #toggleSidebar {
