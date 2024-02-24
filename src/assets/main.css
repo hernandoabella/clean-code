@@ -69,7 +69,7 @@ header {
   align-items: center;
   border-right: 1px solid #ECEBEB;
   background: #fff;
-
+  transition: .3s;
 }
 
 .sidebar ul {
@@ -159,7 +159,6 @@ header {
   color: #fff;
 }
 
-
 .DarkModeBtn {
   color: #333;
   border: none;
@@ -202,6 +201,10 @@ ul {
 
 @media only screen and (max-width: 768px) {
 
+  header {
+    z-index: 3;
+  }
+
   .header-container {
     gap: 10px;
   }
@@ -228,6 +231,15 @@ ul {
 
   #toggleSidebar {
     display: block;
+  }
+
+  .content {
+    margin-left: 0px;
+  }
+
+  .sidebar {
+    z-index: 2;
+    transform: translateX(-100%);
   }
 
 }
