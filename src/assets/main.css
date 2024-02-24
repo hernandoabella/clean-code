@@ -69,7 +69,6 @@ header {
   padding-top: 20px;
   display: flex;
   align-items: center;
-  transition: 0.3s;
   border-right: 1px solid #ECEBEB;
   background: #fff;
 
@@ -116,7 +115,6 @@ header {
 .content {
   margin-left: 350px;
   padding: 16px;
-  transition: 0.3s;
 }
 
 .section:nth-child(1) {
@@ -130,7 +128,6 @@ header {
 .section {
   margin: 50px;
   padding: 50px;
-  transition: background-color 0.5s ease-in-out;
   height: 85vh;
   border: 1px solid #ECEBEB;
   border-radius: 25px;
@@ -159,7 +156,6 @@ header {
 
 
 .DarkModeBtn {
-  transition: .3s;
   color: #333;
   border: none;
   background: none;
@@ -177,9 +173,7 @@ header {
   background: rgb(68, 66, 184);
   color: #fff;
   border: none;
-  transition: .3s;
   display: block;
-  /* Asegura que esté visible en dispositivos móviles */
 }
 
 #toggleSidebar:hover {
@@ -196,7 +190,6 @@ ul {
 
 .github {
   color: #333;
-  transition: .3s;
 }
 
 .dark-mode .github {
@@ -228,10 +221,6 @@ ul {
 
   .logo {
     display: none;
-  }
-
-  .sidebar {
-    width: 80px;
   }
 
   .sidebar.collapsed {
