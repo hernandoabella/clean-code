@@ -69,7 +69,6 @@ header {
   align-items: center;
   border-right: 1px solid #ECEBEB;
   background: #fff;
-  transition: .3s;
 }
 
 .sidebar ul {
@@ -97,17 +96,13 @@ header {
   color: #ff86ff;
 }
 
-.sidebar.closed {
-  transform: translateX(-100%);
-}
-
 .sidebar button {
   margin: 10px;
   cursor: pointer;
 }
 
 .content.closed {
-  margin-left: 0;
+  margin-left: 350px;
 }
 
 .content {
@@ -217,10 +212,6 @@ ul {
     display: none;
   }
 
-  .logo {
-    display: none;
-  }
-
   .sidebar.collapsed {
     transform: translateX(-120%);
   }
@@ -240,6 +231,10 @@ ul {
   .sidebar {
     z-index: 2;
     transform: translateX(-100%);
+  }
+
+  .sidebar.closed {
+    transform: translateX(0%);
   }
 
 }
