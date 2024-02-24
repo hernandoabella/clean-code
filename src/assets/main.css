@@ -25,6 +25,7 @@ header {
   background: #fff;
   font-size: 2em;
   margin-bottom: 120px;
+  padding: 20px;
 }
 
 .header-right-elements {
@@ -162,7 +163,6 @@ header {
 
 #toggleSidebar {
   top: 10px;
-  margin: 20px;
   z-index: 100;
   cursor: pointer;
   border-radius: 25px;
