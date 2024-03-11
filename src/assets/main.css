@@ -145,6 +145,10 @@ header {
   font-family: "Inter", sans-serif;
 }
 
+.section ul li {
+  margin: 10px;
+}
+
 .scroll-indicator {
   height: 5px;
   width: 0;
