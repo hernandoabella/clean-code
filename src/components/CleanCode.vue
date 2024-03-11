@@ -81,7 +81,7 @@ function scrollIndicator() {
 function scrollToSection(targetSection) {
   window.scrollTo({
     top: targetSection.offsetTop - getHeaderHeight() - getMargin(),
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 }
 
@@ -93,7 +93,7 @@ function toggleSidebar() {
 }
 
 function getHeaderHeight() {
-  return document.querySelector('header').offsetHeight;
+  return document.querySelector("header").offsetHeight;
 }
 
 function getMargin() {
@@ -114,7 +114,6 @@ function updateNavLinksActiveState(activeSection) {
   });
 }
 </script>
-
 
 <template>
   <header>
@@ -228,8 +227,36 @@ function updateNavLinksActiveState(activeSection) {
 
   <div class="content">
     <div id="section1" class="section">
-      <h1>Sección 1</h1>
-      <p>Contenido de la sección 2...</p>
+      <h1>Introduction</h1>
+      <p>
+        Clean code is a fundamental aspect of software development, embodying
+        principles that extend beyond mere aesthetics. Understanding the purpose
+        and benefits of writing clean code is crucial for developers committed
+        to producing high-quality software.
+      </p>
+      <br />
+      <p>
+        Purpose of Clean Code Clean code serves as a blueprint for creating
+        software that is not only functional but also maintainable and
+        understandable. The primary purposes include:
+      </p>
+      <ul>
+        <li>
+          <b>Readability:</b> Clean code is easy to read and comprehend,
+          fostering collaboration among team members and simplifying the
+          onboarding process for new developers.
+        </li>
+        <li>
+          <b>Maintainability:</b> Well-organized and properly documented code
+          facilitates easier maintenance and updates, reducing the likelihood of
+          introducing bugs during modifications.
+        </li>
+        <li>
+          <b>Scalability:</b> Clean code adapts to the evolving needs of a
+          project, ensuring that as it grows, it remains flexible and scalable
+          without sacrificing stability.
+        </li>
+      </ul>
     </div>
 
     <div id="section2" class="section">
