@@ -238,8 +238,9 @@ function updateNavLinksActiveState(activeSection) {
       <p>
         Purpose of Clean Code Clean code serves as a blueprint for creating
         software that is not only functional but also maintainable and
-        understandable. The primary purposes include:
+        understandable. <br /><br />
       </p>
+      <h3>The primary purposes include:</h3>
       <ul>
         <li>
           <b>Readability:</b> Clean code is easy to read and comprehend,
@@ -257,6 +258,8 @@ function updateNavLinksActiveState(activeSection) {
           without sacrificing stability.
         </li>
       </ul>
+
+      
     </div>
 
     <div id="section2" class="section">
