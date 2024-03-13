@@ -308,6 +308,19 @@ function updateNavLinksActiveState(activeSection) {
         maintainability.
       </p>
       <p>Key considerations include:</p>
+      <p>
+        <b> Avoiding Ambiguity:</b> Names should be unambiguous, leaving little
+        room for misinterpretation.
+      </p>
+      <h4>For example:</h4>
+      <pre>
+        <code># Unclear variable name
+x = 10
+
+# Improved, descriptive name
+num_of_items = 10  
+        </code>
+      </pre>
     </div>
 
     <div id="section3" class="section">
