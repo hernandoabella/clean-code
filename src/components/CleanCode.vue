@@ -292,8 +292,22 @@ function updateNavLinksActiveState(activeSection) {
     </div>
 
     <div id="section2" class="section">
-      <h1>Sección 2</h1>
-      <p>Contenido de la sección 2...</p>
+      <h1>Naming Conventions</h1>
+      <p>
+        Adhering to descriptive and consistent naming conventions fosters a
+        codebase that is not only easy to understand but also enjoyable to work
+        with. These principles lay the groundwork for effective communication
+        within the development team and contribute to the overall
+        maintainability of the software.
+      </p>
+      <h3>Descriptive and Meaningful Names</h3>
+      <p>
+        Choosing names that concisely convey the purpose and functionality of
+        variables, functions, and classes is paramount. This promotes clarity
+        and understanding within the codebase, enhancing readability and
+        maintainability.
+      </p>
+      <p>Key considerations include:</p>
     </div>
 
     <div id="section3" class="section">
