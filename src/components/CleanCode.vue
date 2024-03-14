@@ -314,12 +314,105 @@ function updateNavLinksActiveState(activeSection) {
       </p>
       <h4>For example:</h4>
       <pre>
-        <code># Unclear variable name
+        <code class="language-python"># Unclear variable name
 x = 10
 
 # Improved, descriptive name
 num_of_items = 10  
         </code>
+      </pre>
+      Context Awareness: Consider the broader context of the code when selecting
+      names. Names should align with the purpose of the surrounding code. For
+      example:
+      <pre>
+        <code class="language-python">// Unclear method name
+public void process() {
+    // ...
+}
+
+// Improved, context-aware name
+public void processOrder() {
+    // ...
+} 
+        </code>
+      </pre>
+      Consistency: Strive for consistency in naming conventions throughout the
+      project. Consistent naming makes the codebase more predictable and
+      user-friendly. For example:
+      <pre>
+        <code class="language-python">// Variables using different naming styles
+let userName = "John";
+let user_age = 25;
+
+// Consistent naming styles
+let userName = "John";
+let userAge = 25;
+        </code>
+      </pre>
+      Consistent Naming Styles Enforcing a consistent naming style across the
+      entire codebase ensures a unified and cohesive development experience.
+      Guidelines for maintaining consistent naming styles include: CamelCase or
+      Snake_case: Choose a specific convention (e.g., CamelCase or snake_case)
+      and adhere to it consistently. This applies to variables, functions, and
+      other identifiers. For example:
+      <pre>
+        <code class="language-python"># Inconsistent naming styles
+user_name = "Alice"
+getUserName = function() {
+    // ...
+}
+
+# Consistent snake_case style
+user_name = "Alice"
+get_user_name = function() {
+    // ...
+}
+        </code>
+      </pre>
+
+      Use of Abbreviations: If abbreviations are necessary, establish
+      conventions for their usage. Consistency in abbreviation styles avoids
+      confusion. For example:
+      <pre>
+        <code class="language-python">// Inconsistent abbreviation styles
+int num_of_elements = 10;
+String employeeID = "E123";
+
+// Consistent abbreviation style
+int numOfElements = 10;
+String employeeId = "E123";</code>
+      </pre>
+      Namespace Clarity: Ensure that names reflect their appropriate namespaces,
+      preventing naming collisions and contributing to a more organized code
+      structure. For example:
+
+      <pre>
+        <code class="language-python">// Unclear namespace in class name
+public class DatabaseHandler {
+    // ...
+}
+
+// Improved with namespace clarity
+public class DataAccessHandler {
+    // ...
+}</code>
+      </pre>
+
+      Follow Language Conventions: Adhere to the naming conventions recommended
+      by the programming language being used. Consistency with language-specific
+      norms promotes code familiarity. For example:
+      <pre>
+        <code class="language-python">// Inconsistent naming with TypeScript conventions
+let User_Name = "John";
+function getUserInfo() {
+    // ...
+}
+
+// Consistent with TypeScript conventions
+let userName = "John";
+function getUserInfo() {
+    // ...
+}</code>
       </pre>
     </div>
 
