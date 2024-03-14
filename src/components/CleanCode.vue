@@ -230,9 +230,12 @@ function updateNavLinksActiveState(activeSection) {
       <h1>Introduction</h1>
       <p>
         Clean code is a fundamental aspect of software development, embodying
-        principles that extend beyond mere aesthetics. Understanding the purpose
-        and benefits of writing clean code is crucial for developers committed
-        to producing high-quality software.
+        principles that extend beyond mere aesthetics.
+      </p>
+
+      <p>
+        Understanding the purpose and benefits of writing clean code is crucial
+        for developers committed to producing high-quality software.
       </p>
 
       <h3>The primary purposes include:</h3>
