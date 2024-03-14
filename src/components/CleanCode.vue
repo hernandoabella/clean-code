@@ -234,12 +234,13 @@ function updateNavLinksActiveState(activeSection) {
         and benefits of writing clean code is crucial for developers committed
         to producing high-quality software.
       </p>
-      <br />
+
+      <h3>The primary purposes include:</h3>
       <p>
         The purpose of clean code serve as a model for creating software that is
-        not only functional but also maintainable and understandable.<br /><br />
+        not only functional but also maintainable and understandable.
       </p>
-      <h3>The primary purposes include:</h3>
+
       <ul>
         <li>
           <b>Readability:</b> Clean code is easy to read and comprehend,
@@ -258,15 +259,11 @@ function updateNavLinksActiveState(activeSection) {
         </li>
       </ul>
 
+      <h3>Benefits of Writing Clean Code</h3>
       <p>
         Writing clean code yields a variety of advantages, impacting both
         individual developers and the overall development process:
       </p>
-
-      <br />
-
-      <h3>Benefits of Writing Clean Code</h3>
-
       <ul>
         <li>
           <b>Reduced Bugs:</b> Clean code minimizes the chances of introducing
