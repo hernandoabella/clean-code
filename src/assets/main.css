@@ -91,7 +91,6 @@ header {
   font-size: 16px;
   display: block;
   color: #333;
-  transition: .3s;
 }
 
 .sidebar a.active {
@@ -137,8 +136,13 @@ header {
   margin-bottom: 20px;
 }
 
+.section h3 {
+  padding: 10px 0px;
+}
+
 .section p {
   font-family: "Inter", sans-serif;
+  text-align: justify;
 }
 
 .section ul {
