@@ -133,7 +133,7 @@ header {
 }
 
 .section h1 {
-  margin-bottom: 20px;
+  padding: 10px 0px;
 }
 
 .section h3 {
@@ -143,6 +143,7 @@ header {
 .section p {
   font-family: "Inter", sans-serif;
   text-align: justify;
+  padding: 5px 0px;
 }
 
 .section ul {
