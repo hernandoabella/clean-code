@@ -771,12 +771,99 @@ public void processCustomerOrder(Order order) {
 
     <div id="section6" class="section">
       <h1>Variables and Constants</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Meaningful variable names and proper use of constants contribute to code
+        that is easier to understand, maintain, and collaborate on. Consistent
+        naming conventions help create a more cohesive and readable codebase.
+      </p>
+      <h3>Meaningful Variable Names</h3>
+      <p>
+        Choosing meaningful and descriptive variable names is essential for code
+        clarity and maintainability:
+      </p>
+      <h3>Descriptive Naming:</h3>
+      <p>Use names that clearly convey the purpose of the variable.</p>
+      <pre>
+        <code class="language-python"># Unclear variable name
+x = 10
+
+# Descriptive variable name
+num_of_items = 10</code>
+      </pre>
+      <h3>Avoiding Ambiguity:</h3>
+      <p>
+        Ensure variable names are unambiguous and leave little room for
+        misinterpretation.
+      </p>
+      <pre>
+        <code class="language-python">// Unclear variable name
+int result = calculate();
+
+// Descriptive variable name
+int totalSum = calculateTotal();</code>
+      </pre>
+      <h3>Consistency:</h3>
+      <p>
+        Strive for consistency in naming conventions throughout the project.
+      </p>
+      <pre>
+        <code class="language-python">// Variables using different naming styles
+let userName = "John";
+let user_age = 25;
+
+// Consistent naming styles
+let userName = "John";
+let userAge = 25;</code>
+      </pre>
+
+      <h3>Proper Use of Constants</h3>
+      <p>Constants provide a way to represent fixed values with clear names:</p>
+      <h3>Naming Convention:</h3>
+      <p>
+        Use uppercase letters and underscores to distinguish constants from
+        variables.
+      </p>
+      <pre>
+        <code class="language-python">// Unclear constant name
+const int value = 100;
+
+// Proper constant naming
+const int MAX_VALUE = 100;</code>
+      </pre>
+      <h3>Logical Grouping:</h3>
+      <p>Organize related constants together to enhance code organization.</p>
+      <pre>
+        <code class="language-python"># Unclear organization of constants
+const int WIDTH = 800;
+const int HEIGHT = 600;
+
+# Organized constants
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;</code>
+      </pre>
+      <h3>Avoiding Magic Numbers:</h3>
+      <p>
+        Replace magic numbers with named constants to improve code readability.
+      </p>
+      <pre>
+        <code class="language-python">// Magic number without context
+double result = calculateArea(5);
+
+// Named constant providing context
+final double SIDE_LENGTH = 5;
+double result = calculateArea(SIDE_LENGTH);</code>
+      </pre>
     </div>
 
     <div id="section7" class="section">
       <h1>Code Duplication</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Applying the DRY principle and employing refactoring techniques help
+        create a codebase that is more maintainable, extensible, and less prone
+        to errors. Regularly reviewing and addressing duplication enhances
+        overall code quality.
+      </p>
+      
     </div>
 
     <div id="section8" class="section">
