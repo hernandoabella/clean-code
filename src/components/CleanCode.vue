@@ -863,7 +863,109 @@ double result = calculateArea(SIDE_LENGTH);</code>
         to errors. Regularly reviewing and addressing duplication enhances
         overall code quality.
       </p>
-      
+      <h3>DRY Principle (Don't Repeat Yourself)</h3>
+      <p>
+        The DRY principle emphasizes the importance of avoiding redundant code
+        by promoting code reusability:
+      </p>
+      <h3>Identifying Redundancy:</h3>
+      <p>
+        Recognize duplicated code segments that perform similar or identical
+        tasks.
+      </p>
+      <pre>
+        <code class="language-python"># Duplicated code
+def calculate_area_of_square(side_length):
+    return side_length * side_length
+
+def calculate_volume_of_cube(side_length):
+    return side_length * side_length * side_length</code>
+      </pre>
+      <h3>Extracting Common Functionality:</h3>
+      <p>Create reusable functions or methods to encapsulate common logic.</p>
+      <pre>
+        <code class="language-python">// DRY principle applied
+public double calculateArea(double sideLength) {
+    return sideLength * sideLength;
+}
+
+public double calculateVolume(double sideLength) {
+    return sideLength * sideLength * sideLength;</code>
+      </pre>
+      <h3>Utilizing Functions:</h3>
+      <p>Maximize the use of existing functions to avoid duplicating logic.</p>
+      <pre>
+        <code class="language-python">// Duplicated logic
+let total = calculateSum(array1) + calculateSum(array2);
+
+// Reusing existing function
+let total = calculateSum(array1.concat(array2));</code>
+      </pre>
+
+      <h3>Refactoring Techniques</h3>
+      <p>
+        Refactoring involves restructuring existing code to improve its
+        readability, maintainability, and performance:
+      </p>
+      <h3>Extract Method/Function:</h3>
+      <p>Break down large methods into smaller, more focused ones.</p>
+      <pre>
+        <code class="language-python"># Original method
+def process_data(data):
+    # Code...
+    # More code...
+    # Even more code...
+
+# Refactored using extracted functions
+def process_data(data):
+    process_part1(data)
+    process_part2(data)
+    
+def process_part1(data):
+    # Code...
+    
+def process_part2(data):
+    # More code...</code>
+      </pre>
+      <h3>Template Method Pattern:</h3>
+      <p>
+        Identify common patterns and create template methods for shared
+        functionality.
+      </p>
+      <pre>
+        <code class="language-csharp">// Without template method pattern
+public void processOrder(Order order) {
+    validateOrder(order);
+    calculateTotal(order);
+    applyDiscounts(order);
+    generateInvoice(order);
+}
+
+// Using template method pattern
+public void processOrder(Order order) {
+    processOrderTemplate(order);
+}
+
+public abstract void processOrderTemplate(Order order);</code>
+      </pre>
+
+      <h3>Code Reviews:</h3>
+      <p>
+        Regularly conduct code reviews to identify and address duplicated code
+        collaboratively.
+      </p>
+      <pre>
+        <code class="language-csharp">// Identifying duplicated code during a code review
+// ...
+
+// Collaborative refactoring to eliminate duplication
+// ...</code>
+      </pre>
+      <h3>Automated Tools:</h3>
+      <p>
+        Utilize code analysis tools and IDE features to detect and suggest
+        refactorings for duplicated code.
+      </p>
     </div>
 
     <div id="section8" class="section">
