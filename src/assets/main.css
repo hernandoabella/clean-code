@@ -79,9 +79,8 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
+  padding-top: 100px;
+  padding-left: 10px;
   border-left: 1px solid #ECEBEB;
   background: #fff;
   border-radius: 25px;
@@ -137,7 +136,6 @@ header {
 
 .section {
   margin: 20px;
-  padding: 20px;
   border: 1px solid #ECEBEB;
   border-radius: 25px;
   background: #fff;
@@ -148,17 +146,25 @@ header {
 }
 
 .section h1 {
-  padding: 10px 0px;
+  padding: 10px 20px;
+}
+
+.section h2 {
+  padding: 10px 20px;
 }
 
 .section h3 {
   padding: 10px 0px;
 }
 
+.section h3 {
+  padding: 10px 20px;
+}
+
 .section p {
   font-family: "Inter", sans-serif;
   text-align: justify;
-  padding: 5px 0px;
+  padding: 5px 20px;
 }
 
 .section img {
@@ -177,6 +183,7 @@ header {
 .section pre code {
   border-radius: 12px;
   font-size: 1.3em;
+  margin: 0px 20px;
 }
 
 .scroll-indicator {
