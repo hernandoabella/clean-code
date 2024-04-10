@@ -417,72 +417,72 @@ function getUserInfo() {
     </div>
 
     <div id="section3" class="section">
-      <h1>Sección 3</h1>
+      <h1>Code Formatting</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section4" class="section">
-      <h1>Sección 4</h1>
+      <h1>Comments and Documentation</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section5" class="section">
-      <h1>Sección 5</h1>
+      <h1>Functions and Methods</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section6" class="section">
-      <h1>Sección 6</h1>
+      <h1>Variables and Constants</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section7" class="section">
-      <h1>Sección 7</h1>
+      <h1>Code Duplication</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section8" class="section">
-      <h1>Sección 8</h1>
+      <h1>Error Handling</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section9" class="section">
-      <h1>Sección 9</h1>
+      <h1>Testing</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section10" class="section">
-      <h1>Sección 10</h1>
+      <h1>Version Control and Branching</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section11" class="section">
-      <h1>Sección 11</h1>
+      <h1>Code Reviews</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section12" class="section">
-      <h1>Sección 12</h1>
+      <h1>Continuos Integration</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section13" class="section">
-      <h1>Sección 13</h1>
+      <h1>Performance</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section14" class="section">
-      <h1>Sección 14</h1>
+      <h1>Security</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section15" class="section">
-      <h1>Sección 15</h1>
+      <h1>Tools and Linters</h1>
       <p>Contenido de la sección 2...</p>
     </div>
 
     <div id="section16" class="section">
-      <h1>Sección 16</h1>
+      <h1>Conclusion</h1>
       <p>Contenido de la sección 2...</p>
     </div>
   </div>
