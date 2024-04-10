@@ -26,6 +26,7 @@ header {
   font-size: 2em;
   margin-bottom: 120px;
   padding: 20px;
+  border-radius: 0px 0px 25px 0px;
 }
 
 .header-right-elements {
@@ -44,7 +45,6 @@ header {
 }
 
 .logo {
-  font-family: "Anta", sans-serif;
   font-weight: bold;
 }
 
@@ -70,6 +70,21 @@ header {
   align-items: center;
   border-right: 1px solid #ECEBEB;
   background: #fff;
+  border-radius: 25px;
+}
+
+.right-sidebar {
+  height: 100%;
+  width: 350px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #ECEBEB;
+  background: #fff;
+  border-radius: 25px;
 }
 
 .sidebar ul {
@@ -124,7 +139,6 @@ header {
   padding: 20px;
   border: 1px solid #ECEBEB;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: #fff;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
