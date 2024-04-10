@@ -105,10 +105,12 @@ header {
   font-size: 16px;
   display: block;
   color: #333;
+  transition: .3s;
 }
 
 .sidebar a.active {
   color: #ff86ff;
+  font-size: large;
 }
 
 .sidebar button {
@@ -151,10 +153,6 @@ header {
 
 .section h2 {
   padding: 10px 20px;
-}
-
-.section h3 {
-  padding: 10px 0px;
 }
 
 .section h3 {
