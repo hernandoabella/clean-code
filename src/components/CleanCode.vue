@@ -1021,7 +1021,7 @@ public abstract void processOrderTemplate(Order order);</code>
         maintainable codebase. Regularly reviewing and refining error-handling
         strategies enhances the overall reliability of the software.
       </p>
-      <h3>Proper Exception Handling</h3>
+      <h2>Proper Exception Handling</h2>
       <p>
         Proper exception handling is crucial for writing robust and reliable
         code:
@@ -1083,14 +1083,22 @@ try {
       </pre>
 
       <h3>Logging and Debugging</h3>
-      Effective logging and debugging practices help identify and resolve
-      issues:
+      <p>
+        Effective logging and debugging practices help identify and resolve
+        issues:
+      </p>
 
       <h3>Logging Levels:</h3>
       <p>
         Use different logging levels (e.g., debug, info, error) to provide
         varying levels of detail.
       </p>
+      <pre>
+        <code class="language-csharp">// Logging at different levels
+log.Debug("Debug information.");
+log.Info("Informational message.");
+log.Error("Error occurred: " + exception.Message);</code>
+      </pre>
     </div>
 
     <div id="section9" class="section">
@@ -1135,8 +1143,6 @@ try {
   </div>
 
   <div class="right-sidebar">right content</div>
-  <footer>
-    footer
-  </footer>
+  <footer>footer</footer>
   <div class="scroll-indicator"></div>
 </template>
