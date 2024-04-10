@@ -1082,7 +1082,7 @@ try {
 }</code>
       </pre>
 
-      <h3>Logging and Debugging</h3>
+      <h2>Logging and Debugging</h2>
       <p>
         Effective logging and debugging practices help identify and resolve
         issues:
@@ -1099,31 +1099,684 @@ log.Debug("Debug information.");
 log.Info("Informational message.");
 log.Error("Error occurred: " + exception.Message);</code>
       </pre>
+
+      <h3>Contextual Logging:</h3>
+      <p>
+        Include relevant context information in log messages for better
+        understanding.
+      </p>
+      <pre>
+        <code class="language-csharp">// Contextual logging
+logger.error(`Error processing order ${orderId}: ${error.message}`);</code>
+      </pre>
+
+      <h3>Debugging Tools:</h3>
+      <p>
+        Utilize debugging tools provided by integrated development environments
+        (IDEs) or dedicated debugging tools.
+      </p>
+      <pre>
+        <code class="language-python"># Setting breakpoints for debugging
+def calculate_total(price, quantity):
+    # Code...
+    result = price * quantity  # Set breakpoint here
+    # More code...
+    return result</code>
+      </pre>
+      <h3>Unit Testing:</h3>
+      <p>
+        Implement comprehensive unit tests to identify and fix issues early in
+        the development process.
+      </p>
+      <pre>
+        <code class="language-python">// Unit test for exception handling
+@Test(expected = IOException.class)
+public void testFileReadException() throws IOException {
+    // Code that should throw an IOException
+}</code>
+      </pre>
     </div>
 
     <div id="section9" class="section">
       <h1>Testing</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Writing testable code enhances the efficiency of the testing process and
+        contributes to the overall reliability of the software. It encourages
+        good software design practices, making it easier to identify and address
+        issues throughout the development lifecycle.
+      </p>
+      <h3>Importance of Unit Testing</h3>
+      <p>
+        Unit testing plays a crucial role in ensuring the reliability and
+        maintainability of software:
+      </p>
+      <h3>Early Issue Detection:</h3>
+      <p>
+        Unit tests identify issues at an early stage of development, preventing
+        the propagation of bugs to later stages.
+      </p>
+      <h3>Code Confidence:</h3>
+      <p>
+        Successful unit tests provide developers with confidence that their code
+        functions as intended.
+      </p>
+      <h3>Regression Prevention:</h3>
+      <p>
+        Unit tests act as a safety net, preventing the introduction of new bugs
+        during code modifications.
+      </p>
+      <h3>Documentation:</h3>
+      <p>
+        Unit tests serve as living documentation, illustrating how specific
+        components of the code are expected to behave.
+      </p>
+      <pre>
+        <code class="language-python">// Example of a simple JUnit test
+@Test
+public void testAddition() {
+    Calculator calculator = new Calculator();
+    int result = calculator.add(2, 3);
+    assertEquals(5, result);
+}</code>
+      </pre>
+      <h3>Writing Testable Code</h3>
+      <p>
+        Crafting code that is easily testable contributes to effective and
+        efficient testing practices:
+      </p>
+      <h3>Separation of Concerns:</h3>
+      <p>
+        Design code with clear separation of concerns, making individual units
+        isolated and easier to test.
+      </p>
+      <pre>
+        <code class="language-python"># Difficult to test without separation
+def process_and_store_data(data):
+    # Code...
+    # More code...
+    store_data(data)
+
+# Easier to test with separation
+def process_data(data):
+    # Code...
+    # More code...
+    return processed_data
+
+def store_data(data):
+    # Code...</code>
+      </pre>
+
+      <h3>Dependency Injection:</h3>
+      <p>
+        Use dependency injection to inject dependencies into units, facilitating
+        easier substitution with mock objects during testing.
+      </p>
+      <pre>
+        <code class="language-python">// Without dependency injection
+class OrderService {
+    private database: Database;
+
+    constructor() {
+        this.database = new Database();
+    }
+}
+
+// With dependency injection
+class OrderService {
+    private database: Database;
+
+    constructor(database: Database) {
+        this.database = database;
+    }
+}</code>
+      </pre>
+      <h3>Avoiding Global State:</h3>
+      <p>
+        Minimize reliance on global state, which can make testing complex and
+        unpredictable.
+      </p>
+      <pre>
+        <code class="language-python">// Code with global state
+public class GlobalState {
+    public static int counter = 0;
+}
+
+// Code avoiding global state
+public class Counter {
+    private int count = 0;
+    
+    public int getCount() {
+        return count;
+    }
+    
+    public void increment() {
+        count++;
+    }</code>
+      </pre>
+
+      <h3>Test Framework Integration:</h3>
+      <p>
+        Write tests using a testing framework suitable for the programming
+        language, such as JUnit for Java or pytest for Python.
+      </p>
+      <pre>
+        <code class="language-csharp">// Example of a JUnit test
+@Test
+public void testMultiplication() {
+    Calculator calculator = new Calculator();
+    int result = calculator.multiply(2, 3);
+    assertEquals(6, result);
+}</code>
+      </pre>
     </div>
 
     <div id="section10" class="section">
       <h1>Version Control and Branching</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Adhering to version control best practices and effective branching
+        strategies promotes collaboration, facilitates code reviews, and ensures
+        a smooth and organized development workflow. These practices contribute
+        to a more stable and manageable codebase over time.
+      </p>
+      <h3>Best Practices for Version Control</h3>
+      <p>
+        Following best practices for version control ensures collaboration,
+        traceability, and a streamlined development process:
+      </p>
+
+      <h3>Frequent Commits:</h3>
+      <p>
+        Make small, frequent commits to track changes effectively and provide a
+        detailed history of the project's evolution.
+      </p>
+      <pre>
+        <code class="language-bash"># Frequent commits with meaningful messages
+git commit -m "Implement feature A"
+git commit -m "Fix issue in feature B"</code>
+      </pre>
+
+      <h3>Descriptive Commit Messages:</h3>
+      <p>
+        Write clear and concise commit messages that explain the purpose and
+        context of the changes.
+      </p>
+
+      <pre>
+        <code class="language-bash"># Unclear commit message
+git commit -m "Update code"
+
+# Descriptive commit message
+git commit -m "Add user authentication feature"</code>
+      </pre>
+
+      <h3>Branch Naming Conventions:</h3>
+      <p>
+        Adopt consistent branch naming conventions to easily identify the
+        purpose of each branch.
+      </p>
+
+      <pre>
+        <code class="language-bash"># Non-descriptive branch name
+git branch feature
+
+# Descriptive branch name
+git branch feature-user-authentication</code>
+      </pre>
+
+      <h3>Pull Requests/Merge Requests:</h3>
+      <p>
+        Use pull requests (or merge requests) for code review and integration,
+        allowing collaborators to provide feedback before changes are merged.
+      </p>
+      <pre>
+        <code class="language-bash"># Creating a pull request
+git checkout -b feature-user-authentication
+git commit -m "Implement user authentication"
+git push origin feature-user-authentication</code>
+      </pre>
+
+      <h3>Effective Branching Strategies</h3>
+      <p>
+        Employing effective branching strategies facilitates parallel
+        development and release management:
+      </p>
+      <h3>Feature Branches:</h3>
+      <p>
+        Create feature branches for the development of specific features or
+        enhancements.
+      </p>
+      <pre>
+        <code class="language-bash"># Creating a release branch
+git checkout -b release-1.0</code>
+      </pre>
+
+      <h3>Hotfix Branches:</h3>
+      <p>
+        Address critical issues in production by creating hotfix branches,
+        fixing the issue, and merging the changes back into the main and release
+        branches.
+      </p>
+      <pre>
+        <code class="language-bash"># Creating a hotfix branch
+git checkout -b hotfix-security-issue</code>
+      </pre>
+      <h3>Main/Branch:</h3>
+      <p>
+        Keep the main (or master) branch stable and deployable at all times.
+        Integrate features through pull requests to maintain a clean and
+        reliable main branch.
+      </p>
+      <pre>
+        <code class="language-bash"># Merging a feature into main
+git checkout main
+git merge feature-user-authentication</code>
+      </pre>
+      <h3>Long-Term Branches:</h3>
+      <p>
+        Utilize long-term branches for ongoing development efforts or
+        maintenance of older releases.
+      </p>
+      <pre>
+        <code class="language-bash"># Creating a long-term support branch
+git checkout -b lts-branch</code>
+      </pre>
     </div>
 
     <div id="section11" class="section">
       <h1>Code Reviews</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Effective code reviews promote a collaborative and learning-oriented
+        environment within a development team. Providing constructive feedback
+        ensures that developers can learn from the review process and
+        continuously improve their coding practices.
+      </p>
+
+      <h2>Conducting and Participating in Code Reviews</h2>
+      <p>
+        Effective code reviews contribute to code quality, knowledge sharing,
+        and collaboration within a development team:
+      </p>
+      <ul>
+        <li>
+          <b>Early Involvement:</b> Initiate code reviews early in the
+          development process to catch issues and provide feedback promptly.
+        </li>
+        <li>
+          <b>Use of Code Review Tools:</b> Leverage code review tools or
+          platforms to facilitate the review process and provide a centralized
+          location for discussions.
+        </li>
+        <li>
+          <b>Clear Objectives:</b> Clearly define the objectives of the code
+          review, whether it's ensuring code quality, identifying bugs, or
+          verifying adherence to coding standards.
+        </li>
+        <li>
+          <b>Balanced Timing:</b> Avoid excessively long code review sessions.
+          Aim for a balance that allows thorough examination without causing
+          delays.
+        </li>
+        <li>
+          <b>Consistent Standards:</b> Establish and follow consistent code
+          review standards within the team to maintain a cohesive approach.
+        </li>
+        <li>
+          <b>Constructive Tone:</b> Use a constructive and positive tone in
+          comments. Focus on improving the code rather than criticizing the
+          developer.
+        </li>
+      </ul>
+      <pre>
+        <code class="language-python"># Constructive comment
+# Consider using a more descriptive variable name for clarity</code>
+      </pre>
+      <h3>Focus on High-Impact Issues:</h3>
+      <p>
+        Prioritize feedback on critical issues such as security vulnerabilities,
+        logic errors, and maintainability concerns.
+      </p>
+      <h3>Providing Constructive Feedback</h3>
+      <p>
+        When providing feedback during a code review, aim for constructive and
+        actionable suggestions:
+      </p>
+      <p>
+        <b>Be Specific:</b> Clearly articulate the issue or improvement,
+        providing specific examples when possible.
+      </p>
+      <pre>
+        <code class="language-csharp">// Vague feedback
+// This function is confusing; please fix it.
+
+// Specific feedback
+// Consider renaming the function to better reflect its purpose, such as 'calculateTotal'.</code>
+      </pre>
+      <h3>Suggest Alternatives:</h3>
+      <p>
+        If pointing out a problem, suggest alternative solutions or approaches
+        to guide the developer.
+      </p>
+      <pre>
+        <code class="language-csharp">// Identifying an issue without suggestions
+// This loop is inefficient; please optimize it.
+
+// Providing feedback with alternatives
+// Consider using a HashSet to improve lookup performance in this loop.</code>
+      </pre>
+
+      <h3>Explain the Reasoning:</h3>
+      <p>
+        Clarify the rationale behind your feedback, especially if it involves
+        adherence to coding standards or best practices.
+      </p>
+      <pre>
+        <code class="language-csharp"># Providing feedback without explanation
+# Use consistent indentation in this block.
+
+# Explaining the reasoning
+# To maintain code consistency, please use four spaces for indentation in this block.</code>
+      </pre>
+
+      <h3>Acknowledge Positive Aspects:</h3>
+      <p>
+        Recognize and acknowledge positive aspects of the code to foster a
+        positive and collaborative atmosphere.
+      </p>
+      <h3>Encourage Discussion:</h3>
+      <p>
+        Encourage open communication and a two-way dialogue during the code
+        review process.
+      </p>
+
+      <pre>
+        <code class="language-csharp">// Encouraging discussion
+// I have some concerns about the approach in this section. Can we discuss it further in our next meeting?</code>
+      </pre>
+      <h3>Prioritize Issues:</h3>
+      <p>
+        If there are multiple feedback points, prioritize them to guide the
+        developer on which aspects to address first.
+      </p>
+      <pre>
+        <code class="language-csharp"># Prioritizing feedback
+# Address the critical security issue first, and then we can look into optimizing the performance.</code>
+      </pre>
     </div>
 
     <div id="section12" class="section">
       <h1>Continuos Integration</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Continuous integration and continuous delivery practices contribute to a
+        more efficient and reliable software development lifecycle.
+      </p>
+      <p>
+        Automated builds, tests, and deployments ensure that code changes are
+        thoroughly validated and seamlessly delivered to production
+        environments.
+      </p>
+      <h3>Automated Builds and Tests</h3>
+      <p>
+        Automated builds and tests are fundamental components of continuous
+        integration, ensuring code quality and reliability:
+      </p>
+      <h3>Build Automation:</h3>
+      <p>
+        Automate the process of compiling and building the codebase to identify
+        compilation errors and ensure consistency.
+      </p>
+      <pre>
+        <code class="language-csharp"># Example of build automation script
+# Execute build commands
+make build
+
+# Run automated tests
+make test</code>
+      </pre>
+      <h3>Unit Tests:</h3>
+      <p>
+        Implement a suite of automated unit tests to verify the correctness of
+        individual components or functions.
+      </p>
+
+      <pre>
+        <code class="language-csharp">// Example of a JUnit test
+@Test
+public void testAddition() {
+    Calculator calculator = new Calculator();
+    int result = calculator.add(2, 3);
+    assertEquals(5, result);</code>
+      </pre>
+      <h3>Integration Tests:</h3>
+      <p>
+        Include automated integration tests to validate the interaction between
+        different components or services.
+      </p>
+      <pre>
+        <code class="language-csharp"># Example of integration test using pytest
+def test_integration():
+    result = perform_integration_operation()
+    assert result == expected_result</code>
+      </pre>
+
+      <h3>Continuous Testing:</h3>
+      <p>
+        Integrate automated tests into the CI pipeline to run tests
+        automatically upon code changes.
+      </p>
+      <pre>
+        <code class="language-csharp"># Example CI configuration (e.g., using GitHub Actions)
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Build and Test
+      run: |
+        make build
+        make test</code>
+      </pre>
+
+      <h3>CI/CD Best Practices</h3>
+      <p>
+        Adopting best practices for continuous integration and continuous
+        delivery (CI/CD) enhances development and deployment processes:
+      </p>
+      <h3>Automated Deployment:</h3>
+      <p>
+        Automate the deployment process to streamline the release of software
+        updates.
+      </p>
+
+      <pre>
+        <code class="language-csharp"># Example CI/CD configuration for deployment
+name: Continuous Delivery
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Deploy to Production
+      run: |
+        make deploy</code>
+      </pre>
+      <h3>Immutable Infrastructure:</h3>
+      <p>
+        Treat infrastructure as code, enabling the recreation of environments
+        with consistent configurations.
+      </p>
+
+      <pre>
+        <code class="language-csharp"># Example Terraform script for infrastructure
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+}</code>
+      </pre>
+      <h3>Rollback Mechanism:</h3>
+      <p>
+        Implement a rollback mechanism to quickly revert to a stable state in
+        case of deployment issues.
+      </p>
+      <pre>
+        <code class="language-csharp"># Example CI/CD configuration with rollback
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to Production
+      run: |
+        make deploy || make rollback</code>
+      </pre>
+      <h3>Pipeline as Code:</h3>
+      <p>
+        Define CI/CD pipelines as code to version control the pipeline
+        configuration.
+      </p>
+      <pre>
+        <code class="language-csharp"># Example CI/CD pipeline definition
+pipelines:
+  default:
+    - step:
+        name: Build and Test
+        script:
+          - make build
+          - make test</code>
+      </pre>
+      <h3>Environment Promotion:</h3>
+      <p>
+        Promote code through different environments (e.g., development, staging,
+        production) with consistency.
+      </p>
+      <pre>
+        <code class="language-csharp"># Example CI/CD pipeline for environment promotion
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy_dev:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Development
+      run: make deploy_dev
+
+  deploy_prod:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Production
+      run: make deploy_prod</code>
+      </pre>
     </div>
 
     <div id="section13" class="section">
       <h1>Performance</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Writing efficient code involves a combination of algorithmic choices,
+        data structure selection, and coding practices. Regularly assessing and
+        optimizing code for performance ensures that the software can scale and
+        respond effectively to user demands.
+      </p>
+
+      <h3>Considerations Identifying and Optimizing Bottlenecks</h3>
+      <p>
+        Identifying and optimizing performance bottlenecks is crucial for
+        creating efficient software:
+      </p>
+      <h3>Profiling Tools:</h3>
+      <p>
+        Use profiling tools to analyze the runtime behavior of the application
+        and identify performance bottlenecks.
+      </p>
+
+      <pre>
+        <code class="language-csharp"># Example of profiling with Python's cProfile
+python -m cProfile my_script.py</code>
+      </pre>
+      <h3>Code Reviews:</h3>
+      <p>
+        Conduct code reviews with a performance focus, identifying potential
+        bottlenecks and discussing optimization strategies.
+      </p>
+      <pre>
+        <code class="language-csharp">// Code review comment addressing potential bottleneck
+// Consider optimizing this loop for better performance.</code>
+      </pre>
+      <h3>Monitoring and Logging:</h3>
+      <p>
+        Implement monitoring and logging to collect performance metrics in
+        production, allowing the identification of runtime issues.
+      </p>
+      <pre>
+        <code class="language-csharp">// Example of logging performance metrics
+Logger.log("Processing time: " + elapsedTime + " milliseconds");</code>
+      </pre>
+      <h3>Load Testing:</h3>
+      <p>
+        Conduct load testing to simulate real-world usage scenarios and identify
+        how the application performs under various conditions.
+      </p>
+      <pre>
+        <code class="language-csharp"># Example of load testing with Apache JMeter
+jmeter -n -t my_test_plan.jmx -l results.jtl</code>
+      </pre>
+
+      <h3>Writing Efficient Code</h3>
+      <p>
+        Writing code with efficiency in mind contributes to improved
+        performance:
+      </p>
+      <h3>Algorithmic Efficiency:</h3>
+      <p>
+        Choose algorithms with optimal time and space complexity for the problem
+        at hand.
+      </p>
+      <pre>
+        <code class="language-python"># Example of inefficient algorithm
+def find_element(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1</code>
+      </pre>
+      <h3>Data Structures:</h3>
+      <p>
+        Select appropriate data structures to enhance the efficiency of common
+        operations.
+      </p>
+      <pre>
+        <code class="language-csharp">...</code>
+      </pre>
+      <h3>Caching:</h3>
+      <p>
+        Utilize caching mechanisms to store and reuse previously computed
+        results, reducing redundant calculations.
+      </p>
     </div>
 
     <div id="section14" class="section">
@@ -1142,7 +1795,16 @@ log.Error("Error occurred: " + exception.Message);</code>
     </div>
   </div>
 
-  <div class="right-sidebar">right content</div>
+  <div class="right-sidebar">
+    <h2>Useful links</h2>
+    <ul>
+      <li>link 1</li>
+      <li>link 2</li>
+      <li>link 3</li>
+      <li>link 4</li>
+      <li>link 5</li>
+    </ul>
+  </div>
   <footer>footer</footer>
   <div class="scroll-indicator"></div>
 </template>
