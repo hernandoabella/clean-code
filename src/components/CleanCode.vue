@@ -418,12 +418,193 @@ function getUserInfo() {
 
     <div id="section3" class="section">
       <h1>Code Formatting</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Adhering to consistent indentation and following line length and
+        formatting guidelines results in a codebase that is not only visually
+        appealing but also easier to understand and maintain.
+      </p>
+      <p>
+        These practices contribute to a more collaborative and efficient
+        development process.
+      </p>
+      <h3>Consistent Indentation</h3>
+      <p>
+        Consistent indentation enhances code readability and maintainability.
+        It's essential to follow a standardized indentation style throughout the
+        codebase.
+      </p>
+      <h3>For example:</h3>
+      <pre>
+        <code class="language-python"># Inconsistent indentation
+def calculate_total(price, quantity):
+total = price * quantity
+return total
+
+# Consistent indentation (four spaces)
+def calculate_total(price, quantity):
+    total = price * quantity
+    return total</code>
+      </pre>
+
+      <h3>Line Length and Formatting Guidelines</h3>
+      <p>
+        Setting guidelines for line length and code formatting contributes to a
+        visually cohesive and easy-to-follow codebase.
+      </p>
+      <h2>Consider the following practices:</h2>
+      <h3>Maximum Line Length:</h3>
+      <p>
+        Define a maximum line length to prevent excessively long lines. This
+        enhances code readability, especially when viewing code side by side.
+      </p>
+      <h3>For example:</h3>
+
+      <pre>
+        <code class="language-python">// Exceeds maximum line length
+String message = "This is a long message that goes beyond the recommended line length, and it might make the code harder to read and maintain.";
+
+// Adhering to maximum line length
+String message =
+        "This is a long message that adheres to the recommended line length, enhancing code readability.";</code>
+      </pre>
+
+      <h3>Consistent Formatting:</h3>
+      <p>
+        Establish consistent formatting rules for elements such as braces,
+        parentheses, and operators. This promotes a uniform appearance across
+        the codebase.
+      </p>
+      <h3>For example:</h3>
+      <pre>
+        <code class="language-python">// Inconsistent formatting of braces
+if (condition)
+{
+    // code
+} else {
+    // code
+}
+
+// Consistent formatting of braces
+if (condition) {
+    // code
+} else {
+    // code
+}</code>
+      </pre>
+      <h3>Vertical Alignment:</h3>
+      <p>
+        Align similar elements vertically to improve code aesthetics. This can
+        include aligning assignments or parameters for better readability.
+      </p>
+      <h3>For example:</h3>
+      <pre>
+        <code class="language-python"># Inconsistent vertical alignment
+variable1 = 10
+variable2 = 20
+variable3 = 30
+
+# Consistent vertical alignment
+variable1   = 10
+variable2   = 20
+variable3   = 30</code>
+      </pre>
     </div>
 
     <div id="section4" class="section">
       <h1>Comments and Documentation</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Balancing the use of comments with writing self-explanatory code is key
+        to creating maintainable and understandable software. Documenting APIs
+        and functions ensures that users, including future developers, can
+        effectively utilize the codebase.
+      </p>
+      <h3>When to Use Comments</h3>
+      <p>
+        Comments should be used judiciously to provide additional context or
+        clarification when the code alone may not be self-explanatory. Key
+        scenarios for using comments include:
+      </p>
+      <h3>Complex Algorithms:</h3>
+      <p>
+        Explain intricate algorithms or non-trivial logic to aid understanding.
+      </p>
+      <pre>
+        <code class="language-python">// Use binary search to find the element efficiently</code>
+      </pre>
+      <h3>Workarounds or Hacks:</h3>
+      <p>
+        Clarify temporary solutions or workarounds with comments, and include
+        plans for future improvements.
+      </p>
+      <pre>
+        <code class="language-python"># Temporary fix until issue #123 is resolved</code>
+      </pre>
+      <h3>Edge Cases:</h3>
+      <p>Highlight considerations for edge cases or exceptional scenarios.</p>
+      <pre>
+        <code class="language-python">// Handle edge case where array length is 0</code>
+      </pre>
+      <h3>Writing Self-Explanatory Code</h3>
+      <p>
+        Prioritize writing code that is inherently clear and self-explanatory
+        without relying heavily on comments.
+      </p>
+      <p>Techniques for achieving self-explanatory code include:</p>
+      <h3>Descriptive Naming:</h3>
+      <p>
+        Use meaningful and descriptive names for variables, functions, and
+        classes.
+      </p>
+      <pre>
+        <code class="language-python">// Non-descriptive variable
+int x = 5;
+
+// Descriptive variable name
+int numberOfStudents = 5;</code>
+      </pre>
+      <h3>Modularization:</h3>
+      <p>
+        Break down complex tasks into smaller, modular functions with clear
+        purposes.
+      </p>
+      <pre>
+        <code class="language-python"># Non-modularized code
+result = process_data(data)
+
+# Modularized code
+result = calculate_statistics(data)</code>
+      </pre>
+      <h3>Consistent Coding Style:</h3>
+      <p>
+        Adhere to a consistent coding style, making the codebase predictable and
+        easy to follow.
+      </p>
+      <pre>
+        <code class="language-python">// Inconsistent coding style
+if (condition) return true;
+
+// Consistent coding style
+if (condition) {
+    return true;
+}</code>
+      </pre>
+
+      <h3>Documenting APIs and Functions</h3>
+      <p>
+        Comprehensive documentation is crucial for APIs and functions to guide
+        users on their usage. Include the following information:
+      </p>
+      <h3>Function/Method Purpose:</h3>
+      <p>
+        Describe the overall purpose and functionality of the API or function.
+      </p>
+      <pre>
+        <code class="language-python">/**
+ * Retrieves the user details based on the provided user ID.
+ * @param userId The unique identifier of the user.
+ * @return User object containing user details.
+ */</code>
+      </pre>
     </div>
 
     <div id="section5" class="section">
