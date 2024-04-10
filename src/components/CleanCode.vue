@@ -605,11 +605,168 @@ if (condition) {
  * @return User object containing user details.
  */</code>
       </pre>
+
+      <h3>Parameters:</h3>
+      <p>
+        Document each parameter, specifying its type, purpose, and any
+        constraints.
+      </p>
+      <pre>
+        <code class="language-python">def calculate_discount(price, discount_percentage):
+    """
+    Calculates the discounted price based on the original price and discount percentage.
+    :param price: The original price of the item.
+    :param discount_percentage: The percentage of discount to be applied.
+    :return: The discounted price.
+    """</code>
+      </pre>
+      <h3>Return Values:</h3>
+      <p>Clearly state the type and meaning of the return values.</p>
+      <pre>
+        <code class="language-python">/**
+ * Validates the user input and returns a boolean indicating whether it is valid.
+ * @param userInput The input provided by the user.
+ * @return {boolean} True if the input is valid, false otherwise.
+ */</code>
+      </pre>
     </div>
 
     <div id="section5" class="section">
       <h1>Functions and Methods</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Adhering to the Single Responsibility Principle ensures that functions
+        and methods are focused and easier to understand, while minimizing side
+        effects contributes to code that is more predictable and maintainable.
+      </p>
+      <h3>Single Responsibility Principle</h3>
+      <p>
+        Adhering to the Single Responsibility Principle (SRP) ensures that each
+        function or method has a clear, singular purpose. This enhances code
+        clarity and maintainability:
+      </p>
+      <h3>Clear Purpose:</h3>
+      <p>Define functions to perform one specific task or responsibility.</p>
+      <pre>
+        <code class="language-python">// Violating SRP
+public void processOrderAndSendEmail(Order order) {
+    // Code to process order
+    // Code to send email
+}
+
+// Adhering to SRP
+public void processOrder(Order order) {
+    // Code to process order
+}
+
+public void sendOrderConfirmationEmail(Order order) {
+    // Code to send email
+}</code>
+      </pre>
+      <h3>Modularization:</h3>
+      <p>
+        Break down complex tasks into smaller, focused functions, each
+        responsible for a specific aspect.
+      </p>
+      <pre>
+        <code class="language-python"># Violating SRP
+def process_data(data):
+    # Code to process data
+    # Code to update database
+    # Code to send notifications
+
+# Adhering to SRP
+def process_data(data):
+    # Code to process data
+
+def update_database(data):
+    # Code to update database
+
+def send_notifications(data):
+    # Code to send notifications</code>
+      </pre>
+      <h3>Avoiding Side Effects</h3>
+      <p>
+        Functions and methods should avoid unintended side effects to enhance
+        predictability and maintainability:
+      </p>
+      <h3>Pure Functions:</h3>
+      <p>
+        Strive for functions that produce the same output for the same input and
+        have no side effects.
+      </p>
+      <pre>
+        <code class="language-python">// Function with side effect
+let total = 0;
+
+function addToTotal(value) {
+    total += value;
+    return total;
+}
+
+// Pure function
+function addNumbers(a, b) {
+    return a + b;
+}</code>
+      </pre>
+      <h3>Separation of Concerns:</h3>
+      <p>
+        Clearly separate functions that modify state from those that return
+        values without side effects.
+      </p>
+      <pre>
+        <code class="language-python">// Function with side effect
+public void updateDatabaseRecord(int recordId, string newData) {
+    // Code to update database
+}
+
+// Function without side effect
+public string retrieveDataFromDatabase(int recordId) {
+    // Code to retrieve data from database
+    return data;
+}</code>
+      </pre>
+      <h3>Optimal Function and Method Length</h3>
+      <p>
+        Striking a balance between function length and clarity is crucial for
+        readability and maintainability:
+      </p>
+      <h3>Conciseness:</h3>
+      <p>
+        Keep functions and methods concise, focusing on a single responsibility.
+        Aim for a few lines of code whenever possible.
+      </p>
+      <pre>
+        <code class="language-python"># Long method violating optimal length
+def process_data(data):
+    # Code...
+    # More code...
+    # Even more code...
+
+# Short, focused method adhering to optimal length
+def process_data(data):
+    # Code...</code>
+      </pre>
+      <h3>Meaningful Names:</h3>
+      <p>
+        If a function must be longer, ensure it remains understandable and
+        well-organized. Use meaningful names for variables and sections of code.
+      </p>
+      <pre>
+        <code class="language-python">// Long method with unclear structure
+public void processCustomerOrder(Order order) {
+    // Code...
+    // More code...
+    // Even more code...
+}
+
+// Longer method with clear structure
+public void processCustomerOrder(Order order) {
+    validateOrder(order);
+    calculateTotal(order);
+    applyDiscounts(order);
+    generateInvoice(order);
+}</code>
+      </pre>
     </div>
 
     <div id="section6" class="section">
