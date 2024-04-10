@@ -161,6 +161,11 @@ header {
   padding: 5px 0px;
 }
 
+.section img {
+  width: 100%;
+  border-radius: 25px;
+}
+
 .section ul {
   font-family: "Inter", sans-serif;
 }
