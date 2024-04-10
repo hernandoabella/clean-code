@@ -123,7 +123,10 @@ function updateNavLinksActiveState(activeSection) {
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
-      <div class="logo">Clean Code</div>
+      <div>
+        <div class="logo">🧹✨Clean Code🧼🧽</div>
+      </div>
+
       <div class="header-right-elements">
         <div>
           <a
@@ -227,6 +230,9 @@ function updateNavLinksActiveState(activeSection) {
 
   <div class="content">
     <div id="section1" class="section">
+      <div>
+        <img src="/cleancode.jpg" alt="clean-code-image" />
+      </div>
       <h1>Introduction</h1>
       <p>
         Clean code is a fundamental aspect of software development, embodying
@@ -966,11 +972,125 @@ public abstract void processOrderTemplate(Order order);</code>
         Utilize code analysis tools and IDE features to detect and suggest
         refactorings for duplicated code.
       </p>
+
+      <ul>
+        <li>
+          <a href="https://www.jetbrains.com/resharper/"
+            >JetBrains ReSharper:</a
+          >
+          ReSharper provides a set of refactorings that analyze the selected
+          code to provide insights and then update the existing code based on
+          those insights. It includes a wide range of refactoring options such
+          as extracting superclass, introducing parameters, changing signatures,
+          and more.
+        </li>
+        <li>
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid"
+            >CodeMaid:</a
+          >
+          CodeMaid is a Visual Studio extension that supports languages such as
+          C#, C++, F#, JSON, JavaScript, TypeScript, XML, HTML, PHP, PowerShell,
+          VB, and R. It can remove random white space from your code, which
+          helps to improve code readability and maintainability.
+        </li>
+        <li>
+          <a href="https://pmd.github.io/pmd/pmd_userdocs_cpd"
+            >PMD/CPD (Copy/Paste Detector):</a
+          >
+          PMD is a source code analyzer that can find duplicated code blocks. It
+          supports multiple languages and can be run via command-line, Ant task,
+          or Maven plugin. It is useful for finding duplicated code and
+          suggesting refactorings to eliminate those duplications.
+        </li>
+        <li>
+          <a href="https://refactoring.guru/">Refactoring Guru:</a> Refactoring
+          Guru provides information and guidance on various refactoring
+          techniques. It explains how to identify and eliminate duplicate code,
+          as well as how to refactor code to make it more efficient and
+          maintainable.
+        </li>
+      </ul>
     </div>
 
     <div id="section8" class="section">
       <h1>Error Handling</h1>
-      <p>Contenido de la sección 2...</p>
+      <p>
+        Properly handling exceptions, logging relevant information, and
+        utilizing debugging tools contribute to a more resilient and
+        maintainable codebase. Regularly reviewing and refining error-handling
+        strategies enhances the overall reliability of the software.
+      </p>
+      <h3>Proper Exception Handling</h3>
+      <p>
+        Proper exception handling is crucial for writing robust and reliable
+        code:
+      </p>
+      <h3>Catch Specific Exceptions:</h3>
+      <p>
+        Catch specific exceptions rather than using broad catch-all statements.
+      </p>
+      <pre>
+        <code class="language-csharp">// Without template method pattern
+public void processOrder(Order order) {
+    validateOrder(order);
+    calculateTotal(order);
+    applyDiscounts(order);
+    generateInvoice(order);
+}
+
+// Using template method pattern
+public void processOrder(Order order) {
+    processOrderTemplate(order);
+}
+
+public abstract void processOrderTemplate(Order order);</code>
+      </pre>
+      <h3>Graceful Degradation:</h3>
+      <p>
+        Provide meaningful error messages and gracefully degrade when an
+        exception occurs.
+      </p>
+      <pre>
+        <code class="language-python"># Inadequate error message
+try:
+    # Code...
+except ValueError:
+    print("Error occurred.")
+
+# Improved error message
+try:
+    # Code...
+except ValueError as e:
+    print(f"Error: {e}")</code>
+      </pre>
+      <h3>Logging Exceptions:</h3>
+      <p>Log exceptions to aid in debugging and issue resolution.</p>
+      <pre>
+        <code class="language-csharp">// Logging exception without details
+try {
+    // Code...
+} catch (error) {
+    console.error("An error occurred.");
+}
+
+// Logging exception with details
+try {
+    // Code...
+} catch (error) {
+    console.error(`An error occurred: ${error.message}`);
+}</code>
+      </pre>
+
+      <h3>Logging and Debugging</h3>
+      Effective logging and debugging practices help identify and resolve
+      issues:
+
+      <h3>Logging Levels:</h3>
+      <p>
+        Use different logging levels (e.g., debug, info, error) to provide
+        varying levels of detail.
+      </p>
     </div>
 
     <div id="section9" class="section">
@@ -1014,5 +1134,9 @@ public abstract void processOrderTemplate(Order order);</code>
     </div>
   </div>
 
+  <div class="right-sidebar">right content</div>
+  <footer>
+    footer
+  </footer>
   <div class="scroll-indicator"></div>
 </template>
