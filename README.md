@@ -1,6 +1,6 @@
 # Clean Code
 
-# Table of Contents
+## Table of Contents
 
 1. [Introduction](#Introduction)
 2. [Naming Conventions](#Naming-Conventions)
@@ -17,7 +17,6 @@
 13. [Performance Considerations](#Performance-Considerations)
 14. [Security](#Security)
 15. [Tools and Linters](#Tools-and-Linters)
-16. [Conclusion](#Conclusion)
 
 ## Introduction
 Clean code is a cornerstone of software development, emphasizing principles that go beyond mere aesthetics. Developers who prioritize clean code practices are better equipped to produce high-quality software that is not only functional but also maintainable, understandable, and scalable.
